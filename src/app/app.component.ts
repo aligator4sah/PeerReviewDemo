@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { setTheme } from 'ngx-bootstrap/utils';
+import { BaseChartDirective } from 'ng2-charts';
+
 
 @Component({
   selector: 'app-root',

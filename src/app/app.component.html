@@ -359,16 +359,20 @@
     <div class="content-right" style="width: 36%; margin-right: 10px;">
       <h5 style="padding-bottom: 10px;">Overview</h5>
       <accordion>
-        <accordion-group heading="Static Header" style="margin-bottom: 10px;">
+        <accordion-group heading="Review score summary" style="margin-bottom: 10px;">
           This content is straight in the template.
         </accordion-group>
-        <accordion-group heading="Another group">
-          <p>Some content</p>
+        <accordion-group heading="Comments volume of key aspects" style="margin-bottom: 10px;">
+          <app-comment-volume></app-comment-volume>
         </accordion-group>
-        <accordion-group heading="Another group">
-          <p>Some content</p>
+        <accordion-group heading="Comment Conclusions" style="margin-bottom: 10px;">
+          <strong>R1</strong>
+          <div class="comments_labels" style="display: flex; direction: columns;">
+            <button type="button" class="btn btn-primary" [disabled]="true" style="margin-right: 10px;">Button</button>
+            <button type="button" class="btn btn-default" [disabled]="true">Button</button>
+          </div>
         </accordion-group>
-        <accordion-group heading="Another group">
+        <accordion-group heading="Disagreement & Census" style="margin-bottom: 10px;">
           <p>Some content</p>
         </accordion-group>
       </accordion>
