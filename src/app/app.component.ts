@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
-import { setTheme } from 'ngx-bootstrap/utils';
 import { BaseChartDirective } from 'ng2-charts';
-
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'peer-review-demo';
+  panelOpenState = false;
   constructor() {
-    setTheme('bs5');
+    
   }
 }
