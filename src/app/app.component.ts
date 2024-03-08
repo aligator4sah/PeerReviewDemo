@@ -9,6 +9,13 @@ import { BaseChartDirective } from 'ng2-charts';
 export class AppComponent {
   title = 'peer-review-demo';
   panelOpenState = false;
+  formatLabel(value: number) {
+    if (value >= 1000) {
+      return Math.round(value / 1000) + 'k';
+    }
+
+    return value;
+  }
   constructor() {
     
   }

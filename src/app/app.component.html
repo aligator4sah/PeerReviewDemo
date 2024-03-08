@@ -19,7 +19,7 @@
     alt="Angular Logo"
     src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
   />
-  <span>Welcome</span>
+  <span>Peer Review</span>
     <div class="spacer"></div>
     <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
       <svg id="twitter-logo" height="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
@@ -37,70 +37,146 @@
 
 
 <div class="content" role="main">
-  <h2>Edit review of 9510 - ""Our diagnostic methodology is very much an art": Investigating Human-AI Workflows for Clinical Decision Making in Concussion Diagnosis"</h2>
+  <h2 style="color: brown;">Edit review of 9510 - ""Our diagnostic methodology is very much an art": Investigating Human-AI Workflows for Clinical Decision Making in Concussion Diagnosis"</h2>
   <div class="content-main" style="display: flex;flex-direction: row;justify-content: space-between; margin: 5px 0px;">
     <div class="content-left" style="width: 60%; padding-right:5px">
-      <div class="text-section" style="margin: 5px">
+      <div class="text-section" style="margin: 5px; padding-bottom: 20px;">
         <b>Instruction for Reviewers</b>
         <p>Thank you for reviewing for CSCW. Your job as a reviewer is to help create a high-quality
           technical program for the conference. We request that you review this submission, primarily
           thinking about the contribution the paper will make to the field</p>
       </div>
-      <div class="text-section" style="margin: 5px">
-        <b>Instruction for Reviewers</b>
-        <p>Thank you for reviewing for CSCW. Your job as a reviewer is to help create a high-quality
-          technical program for the conference. We request that you review this submission, primarily
-          thinking about the contribution the paper will make to the field</p>
+      <div class="text-section" style="margin: 5px; padding-bottom: 20px;">
+        <b>Recommendation</b>
+        <p>TWrite your review of the submission here. Your review should address all or at least most of
+          the questions below. In the past, strong reviews have often addressed these explicitly in the
+          review itself</p>
+      </div>
+      <div class="text-section" style="margin: 5px; padding-bottom: 20px;">
+        <b>Reviewers</b>
+        <p>TWrite your review of the submission here. Your review should address all or at least most of
+          the questions below. In the past, strong reviews have often addressed these explicitly in the
+          review itself</p>
           <mat-slide-toggle>toggle me!</mat-slide-toggle>
       </div>
     </div>
 
     <div class="content-right" style="width: 36%; margin-right: 10px;">
-      <h5 style="padding-bottom: 10px;">Overview</h5>
+      <h3 style="padding-bottom: 20px; color: brown;">Overview</h3>
       <mat-accordion>
-        <mat-expansion-panel hideToggle>
+        <mat-expansion-panel style="margin-bottom: 10px;">
           <mat-expansion-panel-header>
             <mat-panel-title>
-              This is the expansion title
+              Review score summary
             </mat-panel-title>
-            <mat-panel-description>
-              This is a summary of the content
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <p>This is the primary content of the panel.</p>
+          </mat-expansion-panel-header>          
+          <div class="score_bars" style="display: flex; flex-direction: column;">
+            <div class="slider_bar" style="display: flex; flex-direction: row; align-items: center; margin: 10px 0">
+              <span style="padding-right: 26px;">Quality</span>
+              <mat-slider
+                thumbLabel
+                [displayWith]="formatLabel"
+                tickInterval="1000"
+                step="1000"
+                min="0"
+                max="100000"
+                aria-label="units"></mat-slider>
+            </div>
+
+            <div class="slider_bar" style="display: flex; flex-direction: row; align-items: center; margin: 10px 0">
+              <span style="padding-right: 10px;">Signicance</span>
+              <mat-slider
+                thumbLabel
+                [displayWith]="formatLabel"
+                tickInterval="1000"
+                step="1000"
+                min="0"
+                max="100000"
+                aria-label="units"></mat-slider>
+            </div>
+
+            <div class="slider_bar" style="display: flex; flex-direction: row; align-items: center; margin: 10px 0">
+              <span style="padding-right: 40px;">RQ</span>
+              <mat-slider
+                thumbLabel
+                [displayWith]="formatLabel"
+                tickInterval="1000"
+                step="1000"
+                min="0"
+                max="100000"
+                aria-label="units"></mat-slider>
+            </div>
+              
+          </div>
         </mat-expansion-panel>
-        <mat-expansion-panel (opened)="panelOpenState = true"
-                             (closed)="panelOpenState = false">
+        <mat-expansion-panel (opened)="true" style="margin-bottom: 10px;">
           <mat-expansion-panel-header>
             <mat-panel-title>
-              Self aware panel
+              Comments volume of key aspects
             </mat-panel-title>
-            <mat-panel-description>
-              Currently I am {{panelOpenState ? 'open' : 'closed'}}
-            </mat-panel-description>
           </mat-expansion-panel-header>
-          <p>I'm visible because I am open</p>
+          <app-comment-volume></app-comment-volume>
+        </mat-expansion-panel>
+        <mat-expansion-panel style="margin-bottom: 10px;">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Comment Conclusion
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="review_score" style="display: flex; flex-direction: column; justify-content: left;">
+            <div class="review_score_item" style="padding-bottom: 10px; margin-bottom: 5px;">
+              <strong>R1</strong><br>
+              <mat-chip-list aria-label="review1" style="display: flex; flex-direction: row; margin: 10px 0">
+                <mat-chip color="primary" selected>Clarity</mat-chip>
+                <mat-chip>Inclusivity</mat-chip>
+                <mat-chip>Appreciation</mat-chip>
+              </mat-chip-list>         
+            </div>
+            <div class="review_score_item" style="padding-bottom: 10px; margin-bottom: 5px;">
+              <strong>R2</strong><br>
+              <mat-chip-list aria-label="review1" style="display: flex; flex-direction: row; margin: 10px 0">
+                <mat-chip color="primary" selected>Clarity</mat-chip>
+                <mat-chip>Inclusivity</mat-chip>
+                <mat-chip>Appreciation</mat-chip>
+              </mat-chip-list>         
+            </div>
+            <div class="review_score_item" style="padding-bottom: 10px; margin-bottom: 5px;">
+              <strong>R3</strong><br>
+              <mat-chip-list aria-label="review1" style="display: flex; flex-direction: row; margin: 10px 0">
+                <mat-chip color="primary" selected>Clarity</mat-chip>
+                <mat-chip>Inclusivity</mat-chip>
+                <mat-chip>Appreciation</mat-chip>
+              </mat-chip-list>         
+            </div>
+           </div>
+           
+        </mat-expansion-panel>
+        <mat-expansion-panel style="margin-bottom: 10px;">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Disagreement & Census
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="review_score" style="display: flex; flex-direction: column; justify-content: left;">
+            <div class="review_score_item" style="padding-bottom: 10px; margin-bottom: 5px;">
+              <strong>Dis</strong><br>
+              <mat-chip-list aria-label="review1" style="display: flex; flex-direction: row; margin: 10px 0">
+                <mat-chip color="btn-primary">Paper originally</mat-chip>
+                <mat-chip>Paper quality</mat-chip>
+                <mat-chip>Methodology</mat-chip>
+                <mat-chip>Limited participants in Interview</mat-chip>
+                <mat-chip>Actual benefits of this paper</mat-chip>
+              </mat-chip-list>    
+          </div>
+          <div class="review_score_item" style="padding-bottom: 10px; margin-bottom: 5px;">
+            <strong>Cons</strong><br>
+            <mat-chip-list aria-label="review1" style="display: flex; flex-direction: row; margin: 10px 0">
+              <mat-chip color="primary">Underserved population</mat-chip>
+            </mat-chip-list>    
+        </div>
+          </div>
         </mat-expansion-panel>
       </mat-accordion>
-      
-      <!-- <accordion>
-        <accordion-group heading="Review score summary" style="margin-bottom: 10px;">
-          This content is straight in the template.
-        </accordion-group>
-        <accordion-group heading="Comments volume of key aspects" style="margin-bottom: 10px;">
-          <app-comment-volume></app-comment-volume>
-        </accordion-group>
-        <accordion-group heading="Comment Conclusions" style="margin-bottom: 10px;">
-          <strong>R1</strong>
-          <div class="comments_labels" style="display: flex; direction: columns;">
-            <button type="button" class="btn btn-primary" [disabled]="true" style="margin-right: 10px;">Button</button>
-            <button type="button" class="btn btn-default" [disabled]="true">Button</button>
-          </div>
-        </accordion-group>
-        <accordion-group heading="Disagreement & Census" style="margin-bottom: 10px;">
-          <p>Some content</p>
-        </accordion-group>
-      </accordion> -->
     </div>
   </div>
 
@@ -124,16 +200,6 @@
 
   <!-- Footer -->
   <footer>
-      Love Angular?&nbsp;
-      <a href="https://github.com/angular/angular" target="_blank" rel="noopener"> Give our repo a star.
-        <div class="github-star-badge">
-            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          Star
-        </div>
-      </a>
-      <a href="https://github.com/angular/angular" target="_blank" rel="noopener">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#1976d2"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-      </a>
   </footer>
 
   <svg id="clouds" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">

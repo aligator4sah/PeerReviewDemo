@@ -301,3 +301,7 @@
       visibility: hidden;
     }
   }
+
+  mat-slider {
+    width: 250px;
+  }
