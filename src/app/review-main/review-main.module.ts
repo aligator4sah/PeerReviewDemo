@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CommentVolumeComponent } from './comment-volume/comment-volume.component';
+import { CommonModule } from '@angular/common';
+import { ReviewMainComponent } from './review-main.component';
+import { CommentVolumeComponent } from '../comment-volume/comment-volume.component';
 import { NgChartsModule } from 'ng2-charts';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatExpansionModule} from '@angular/material/expansion';
@@ -13,24 +10,23 @@ import {MatSliderModule} from '@angular/material/slider';
 import {MatGridListModule} from '@angular/material/grid-list'; 
 import {MatDialogModule} from '@angular/material/dialog'; 
 
+
+
 @NgModule({
   declarations: [
-    AppComponent,
+    ReviewMainComponent,
     CommentVolumeComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
+    CommonModule,
+    MatSliderModule,
+    MatGridListModule,
+    MatDialogModule,
     NgChartsModule,
     MatSlideToggleModule,
     MatExpansionModule,
-    MatChipsModule,
-    MatSliderModule,
-    MatGridListModule,
-    MatDialogModule
+    MatChipsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  exports:[CommentVolumeComponent,ReviewMainComponent]
 })
-export class AppModule { }
+export class ReviewMainModule { }

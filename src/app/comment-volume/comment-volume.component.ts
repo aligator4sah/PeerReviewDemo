@@ -14,10 +14,11 @@ export class CommentVolumeComponent implements OnInit {
   public barChartPlugins = [];
 
   public barChartData: ChartConfiguration<'bar'>['data'] = {
-    labels: ['2008', '2009', '2010', '2011', '2012' ],
+    labels: ['Contribution&Clarity', 'Community Impact', 'Learning Tool', 'Significance&Impact' ],
     datasets: [
-      { data: [ 80, 81, 56, 55, 40 ], label: 'Series A' },
-      { data: [ 40, 19, 86, 27, 90 ], label: 'Series B' }
+      { data: [ 80, 56, 55, 40 ], label: 'R1' },
+      { data: [ 40, 29, 86, 90 ], label: 'R2' },
+      { data: [ 50,  56, 33, 22 ], label: 'R3' }
     ]
   };
 

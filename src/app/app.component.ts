@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { BaseChartDirective } from 'ng2-charts';
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,9 @@ import { BaseChartDirective } from 'ng2-charts';
 })
 export class AppComponent {
   title = 'peer-review-demo';
+  constructor(public dialog: MatDialog) {
+    
+  }
   panelOpenState = false;
   formatLabel(value: number) {
     if (value >= 1000) {
@@ -16,7 +20,9 @@ export class AppComponent {
 
     return value;
   }
-  constructor() {
-    
-  }
+
+
 }
+
+
+
