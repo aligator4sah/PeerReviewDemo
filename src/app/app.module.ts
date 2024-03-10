@@ -17,14 +17,17 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button'; 
 import {MatIconModule} from '@angular/material/icon';
 import { GroupListComponent } from './group-list/group-list.component'; 
-import {MatListModule} from '@angular/material/list'; 
+import {MatListModule} from '@angular/material/list';
+import { DiscussionComponent } from './discussion/discussion.component'; 
+import {MatTooltipModule} from '@angular/material/tooltip'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     CommentVolumeComponent,
     ReviewMainComponent,
-    GroupListComponent
+    GroupListComponent,
+    DiscussionComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,8 @@ import {MatListModule} from '@angular/material/list';
     MatMenuModule,
     MatButtonModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
