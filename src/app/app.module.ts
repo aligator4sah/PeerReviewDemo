@@ -12,11 +12,18 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatSliderModule} from '@angular/material/slider'; 
 import {MatGridListModule} from '@angular/material/grid-list'; 
 import {MatDialogModule} from '@angular/material/dialog'; 
+import { ReviewMainComponent } from './review-main/review-main.component';
+import {MatMenuModule} from '@angular/material/menu'; 
+import {MatButtonModule} from '@angular/material/button'; 
+import {MatIconModule} from '@angular/material/icon';
+import { GroupListComponent } from './group-list/group-list.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CommentVolumeComponent
+    CommentVolumeComponent,
+    ReviewMainComponent,
+    GroupListComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +35,10 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatChipsModule,
     MatSliderModule,
     MatGridListModule,
-    MatDialogModule
+    MatDialogModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
