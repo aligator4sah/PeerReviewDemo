@@ -20,14 +20,19 @@ import { GroupListComponent } from './group-list/group-list.component';
 import {MatListModule} from '@angular/material/list';
 import { DiscussionComponent } from './discussion/discussion.component'; 
 import {MatTooltipModule} from '@angular/material/tooltip'; 
+import {MatCardModule} from '@angular/material/card'; 
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
     CommentVolumeComponent,
     ReviewMainComponent,
-    GroupListComponent,
-    DiscussionComponent
+    DiscussionComponent,
+    GroupListComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +49,12 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatButtonModule,
     MatIconModule,
     MatListModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatCardModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    FormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
