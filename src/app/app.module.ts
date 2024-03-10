@@ -17,6 +17,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button'; 
 import {MatIconModule} from '@angular/material/icon';
 import { GroupListComponent } from './group-list/group-list.component'; 
+import {MatListModule} from '@angular/material/list'; 
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { GroupListComponent } from './group-list/group-list.component';
     MatDialogModule,
     MatMenuModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

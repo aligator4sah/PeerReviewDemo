@@ -1,1 +1,12 @@
 <p>group-list works!</p>
+<div class="content" role="main">
+    <h2 style="color: brown;">Please select your group to get started</h2>
+    <div class="content-main" style="display: flex;flex-direction: row;justify-content: space-between; margin: 5px 0px; width:400px">
+        <mat-selection-list #group [multiple]="false" style="width: 300px; padding-left: 50px;">
+            <mat-list-option *ngFor="let group of groupList" [value]="group">
+                <p style="text-indent: 6em;">{{group}}</p>
+                <mat-divider></mat-divider>
+            </mat-list-option>
+          </mat-selection-list>
+    </div>
+</div>
