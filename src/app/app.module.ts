@@ -18,7 +18,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { GroupListComponent } from './group-list/group-list.component'; 
 import {MatListModule} from '@angular/material/list';
-import { DiscussionComponent } from './discussion/discussion.component'; 
+import { DiscussionComponent, ReplyDialog } from './discussion/discussion.component'; 
 import {MatTooltipModule} from '@angular/material/tooltip'; 
 import {MatCardModule} from '@angular/material/card'; 
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -32,7 +32,8 @@ import { CommonModule } from '@angular/common';
     CommentVolumeComponent,
     ReviewMainComponent,
     DiscussionComponent,
-    GroupListComponent
+    GroupListComponent,
+    ReplyDialog
   ],
   imports: [
     BrowserModule,
