@@ -1,12 +1,58 @@
 <p>group-list works!</p>
 <div class="content" role="main">
-    <h2 style="color: brown;">Please select your group to get started</h2>
-    <div class="content-main" style="display: flex;flex-direction: row;justify-content: space-between; margin: 5px 0px; width:400px">
-        <mat-selection-list #group [multiple]="false" style="width: 300px; padding-left: 50px;">
-            <mat-list-option *ngFor="let group of groupList" [value]="group">
-                <p style="text-indent: 6em;">{{group}}</p>
-                <mat-divider></mat-divider>
-            </mat-list-option>
-          </mat-selection-list>
-    </div>
+    <h2 style="color: brown;">Get Started</h2>
+        <div class="content-main" style="display: flex;flex-direction: row;justify-content: space-between; margin: 5px 0px; width:400px">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Participant ID:</mat-label>
+                <input matInput placeholder="Ex. Pizza" value="Sushi">
+            </mat-form-field>
+            <mat-divider></mat-divider>
+            <h2>Please select your group to get started</h2>
+            <mat-selection-list #group [multiple]="false" style="width: 300px; padding-left: 50px;">
+                <mat-list-option *ngFor="let group of groupList" [value]="group">
+                    <p style="text-indent: 6em;">{{group}}</p>
+                    <mat-divider></mat-divider>
+                </mat-list-option>
+              </mat-selection-list>
+        </div>
+        <!-- <h2>steppers</h2>
+      <mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
+        <mat-step [stepControl]="firstFormGroup">
+          <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Fill out your participant id</ng-template>
+            <mat-form-field appearance="fill">
+              <mat-label>ID</mat-label>
+              <input matInput placeholder="Participant ID" formControlName="firstCtrl" required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup">
+          <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Select your group</ng-template>
+            <mat-form-field appearance="fill">
+              <mat-label>Group</mat-label>
+              <mat-select formControlName="secondCtrl">
+                <mat-option value="one">Group 1</mat-option>
+                <mat-option value="two">Group 2</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Done</ng-template>
+          <p>You are good to start.</p>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+          </div>
+        </mat-step>
+      </mat-stepper> -->
+    <!-- -->
 </div>

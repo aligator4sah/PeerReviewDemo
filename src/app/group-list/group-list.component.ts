@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-group-list',
@@ -8,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
 export class GroupListComponent implements OnInit {
   groupList: string[] = ['Group 1', 'Group 2', 'Group 3', 'Group 4'];
 
-  constructor() { }
+  firstFormGroup = this._formBuilder.group({
+    firstCtrl: ['', Validators.required],
+  });
+  secondFormGroup = this._formBuilder.group({
+    secondCtrl: ['', Validators.required],
+  });
+  isLinear = false;
+
+  constructor(private _formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
   }
